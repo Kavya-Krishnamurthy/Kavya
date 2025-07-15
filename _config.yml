@@ -1,7 +1,7 @@
 title: Kavya Scribbles 
 description: A cute illustrated blog about life, travel, research, and projects
 baseurl: "" # leave blank for root site
-url: "https://kavya-krishnamurthy.github.io"
+url: "https://Kavya-Krishnamurthy.github.io"
 theme: minima
 plugins:
   - jekyll-feed
