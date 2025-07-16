@@ -51,32 +51,50 @@
       text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #aaa;
+    .posts-list {
+      list-style-type: none;
+      padding-left: 0;
     }
+    .posts-list li {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border-left: 6px solid #E76F51;
+      background: #FFE8D6;
+      border-radius: 8px;
+    }
+    
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      text-align: center;
+      color: #888;
+    }
+    
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Life In mini moments</h1>
-    <div class="date">Posted on July 15, 2025</div>
-
+    <header><h1>{{ site.title }}</h1>
+            <p>{{ site.description }}</p>
+  </header>
     <p>Hello everyone! 👋</p>
     <p>Welcome to my brand new blog! I’m so excited to start sharing my thoughts, adventures, coding experiments, and creative ideas with you here.</p>
     <p>This space will grow with me — from quirky projects to my favorite aesthetics, doodles, and writing experiments.</p>
     <p>I’ll keep it fun, casual, and real. 💛</p>
+  <main>
+    <ul class="posts-list">
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 
-    <p>Stay tuned and thank you for being here!</p>
-
-    <p>With love,<br/>
-    Mini Moments</p>
-  </div>
-
+        <br/>
+        <small>Posted on {{ post.date | date: "%b %-d, %Y" }}</small>
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
   <footer>
-    &copy; 2025 Mini Moments
+    &copy; {{ site.time | date: '%Y' }} My Chibi Blog
   </footer>
 </body>
 </html>
