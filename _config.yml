@@ -5,9 +5,3 @@ url: "https://Kavya-Krishnamurthy.github.io"
 theme: minima
 plugins:
   - jekyll-feed
-
-
-minima:
-  skin: classic
-  include_css:
-    - /assets/css/custom.css
