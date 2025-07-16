@@ -2,72 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title><left>{{ site.title }}</left></title>
+  <title>Welcome to My Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Patrick Hand', cursive;
-      background: #FFFFFF;
-      color: #4B3832;
-      margin: 2rem;
-      border: 0px dashed #F4A261;
-      border-radius: 15px;
+      background: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
     }
-    header {
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #FAF3F0;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      color: #E76F51;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       text-align: center;
+    }
+
+    .date {
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
       margin-bottom: 2rem;
     }
-    h1 {
-      font-size: 3rem;
-      color: #E76F51;
-      text-shadow: 1px 1px #F4A261;
+
+    p {
+      margin-bottom: 1.2rem;
     }
+
     a {
       color: #2A9D8F;
       text-decoration: none;
       font-weight: bold;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .posts-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .posts-list li {
-      margin: 1rem 0;
-      padding: 0.5rem;
-      border-left: 6px solid #E76F51;
-      background: #FFE8D6;
-      border-radius: 8px;
-    }
+
     footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
       text-align: center;
-      color: #888;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-  </header>
-  <main>
-    <ul class="posts-list">
-      {% for post in site.posts %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+  <div class="container">
+    <h1>Welcome to My Blog</h1>
+    <div class="date">Posted on July 15, 2025</div>
 
-        <br/>
-        <small>Posted on {{ post.date | date: "%b %-d, %Y" }}</small>
-      </li>
-      {% endfor %}
-    </ul>
-  </main>
+    <p>Hello everyone! 👋</p>
+    <p>Welcome to my brand new blog! I’m Kavya, and I’m so excited to start sharing my thoughts, adventures, coding experiments, and creative ideas with you here.</p>
+    <p>This space will grow with me — from quirky projects and bioinformatics fun to my favorite aesthetics, doodles, and writing experiments.</p>
+    <p>I’ll keep it fun, casual, and real. 💛</p>
+
+    <p>Stay tuned and thank you for being here!</p>
+
+    <p>With love,<br/>
+    Kavya</p>
+  </div>
+
   <footer>
-    &copy; {{ site.time | date: '%Y' }} My Blog
+    &copy; 2025 Kavya Murthy
   </footer>
 </body>
 </html>
