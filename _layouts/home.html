@@ -7,45 +7,59 @@
   <style>
     body {
       font-family: 'Patrick Hand', cursive;
-      background: #FFF8F0;
-      color: #4B3832;
-      margin: 2rem;
-      border: 5px dashed #F4A261;
-      border-radius: 15px;
+      background: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
     }
+
     header {
       text-align: center;
       margin-bottom: 2rem;
     }
+
     h1 {
       font-size: 3rem;
       color: #E76F51;
-      text-shadow: 1px 1px #F4A261;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.05);
     }
+
     a {
       color: #2A9D8F;
       text-decoration: none;
       font-weight: bold;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     .posts-list {
       list-style-type: none;
-      padding-left: 0;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
     }
+
     .posts-list li {
-      margin: 1rem 0;
-      padding: 0.5rem;
-      border-left: 6px solid #E76F51;
-      background: #FFE8D6;
-      border-radius: 8px;
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      background: #FAF3F0;
+      border-left: 5px solid #E76F51;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
     }
+
+    .posts-list li:hover {
+      transform: translateY(-3px);
+    }
+
     footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
       text-align: center;
-      color: #888;
+      color: #aaa;
     }
   </style>
 </head>
@@ -58,9 +72,7 @@
     <ul class="posts-list">
       {% for post in site.posts %}
       <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-
-        <br/>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>
         <small>Posted on {{ post.date | date: "%b %-d, %Y" }}</small>
       </li>
       {% endfor %}
